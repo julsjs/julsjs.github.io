@@ -40,3 +40,14 @@ img {
   margin: 0 auto;
   width: 200px;
 }
+.fitness-button:hover{
+  background-color: red;
+}
+
+.fitness-button {
+  border: 2px solid #a1a1a1;
+  padding: 5px 5px;
+  background: green;
+  width: 300px;
+  border-radius: 25px;
+}
