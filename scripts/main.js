@@ -4,7 +4,6 @@ myImage.onclick = function() {
     var mySrc = myImage.getAttribute('src');
     if(mySrc === 'images/index.png') {
       myImage.setAttribute ('src','images/Nude.jpg')
-      alert('Thanks');
     } else {
       myImage.setAttribute ('src','images/index.png');
     }
@@ -21,7 +20,7 @@ if (!localStorage.getItem('name')){
     setUserName ();
 } else{
     var storedName = localStorage.getItem('name');
-    myHeading.textContent = 'Send Nudes' + myName ;
+    myHeading.textContent = 'Nicht drauf klicken' + myName ;
 }
 myButton.onclick = function () {
     setUserName();
