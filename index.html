@@ -1,35 +1,105 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>My test page</title>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-    <link href="styles/style.css" rel="stylesheet" type="text/css">
-  </head>
-  <body>
-    <h1>JR Fitness</h1>
-    <h1>Trainingspläne, Shakes und Mehr</h1>
-    <div>
-    <li class="nav-item active">
-        <a href="trainingspläne.html" class="nav-link">
-           <i class="fa fa-tasks" aria-hidden="true"></i>                            
-               <span class="ml-1">Trainingspläne</span>
-       </a>
-    </li>
-    <li class="nav-item active">
-        <a href="shakes.html" class="nav-link">
-           <i class="fa fa-tasks" aria-hidden="true"></i>                            
-               <span class="ml-1">Shakes</span>
-       </a>
-    </li>
-    <li class="nav-item active">
-        <a href="dontclickme.html" class="nav-link">
-           <i class="fa fa-tasks" aria-hidden="true"></i>                            
-               <span class="ml-1">Nicht drauf klicken!</span>
-       </a>
-    </li>
-    
-    </div>
-    <script src="scripts/main.js"></script>
-     </body>
+<meta charset="utf-8">
+<title>JR Fitness</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="styles/w3.css">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<link href="styles/style.css" rel="stylesheet" type="text/css">
+<body>
+
+<div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="mySidebar">
+  <button class="w3-bar-item w3-button w3-large"
+  onclick="w3_close()">Close &times;</button>
+  <a href="trainingspläne.html" class="w3-bar-item w3-button">Mein Trainingsplan</a>
+  <a href="shakes.html" class="w3-bar-item w3-button">Fitness-Shakes</a>
+  <a href="dontclickme.html" class="w3-bar-item w3-button">Bait</a>
+  <a href="myaccout.html" class="w3-bar-item w3-button">Mein Konto</a>
+  <a href="index.html" class="w3-bar-item w3-button">Logout</a>
+</div>
+
+
+<div>
+        <button style="margin:20px;width:100px;float:right; border-radius:5%; background-color:blue; color:white; border:none; " onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+        
+        <div id="id01" class="modal">
+          
+          <form class="modal-content animate" action="/action_page.php">
+            <div class="imgcontainer">
+              <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+              <img src="images/bodybuilding-avatar.jpg" width="100px" height="300px" alt="Avatar" class="avatar">
+            </div>
+        
+            <div class="container">
+              <label><b>Username</b></label>
+              <input type="text" placeholder="Enter Username" name="uname" required>
+        
+              <label><b>Password</b></label>
+              <input type="password" placeholder="Enter Password" name="psw" required>
+                
+              <button type="submit">
+                <a href="loginpage.html">Login</a>
+              </button>
+              <input type="checkbox" checked="checked"> Remember me
+            </div>
+        
+            <div class="container" style="background-color:#f1f1f1">
+              <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+              <span class="psw">Forgot <a href="#">password?</a></span>
+            </div>
+          </form>
+        </div>
+        
+        <script>
+        // Get the modal
+        var modal = document.getElementById('id01');
+        
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+        </script>
+        
+  <button style="display:none;"id="openNav" class="w3-button w3-teal w3-xlarge" onclick="w3_open()">&#9776;</button>
+    <h1 style="margin-left:25%;margin-right:25%;text-align: center; width:100%;">JR Fitness</h1>
+
+
+<script>
+        function w3_open() {
+          //document.getElementById("main").style.marginLeft = "25%";
+          document.getElementById("mySidebar").style.width = "25%";
+          document.getElementById("mySidebar").style.display = "block";
+          document.getElementById("openNav").style.display = 'none';
+        }
+        function w3_close() {
+         // document.getElementById("main").style.marginLeft = "0%";
+          document.getElementById("mySidebar").style.display = "none";
+          document.getElementById("openNav").style.display = "inline-block";
+        }
+        </script>
+
+ 
+
+
+
+
+
+<div class="w3-container">
+    <p style="text-align: center; font-size:18px;"><b>News Feed</b></p>
+</div>
+<center>
+<div class="news-container">
+    <p>News..</p>
+</div>
+</center>
+
+
+</div>
+</div>
+
+
+</body>
 </html>
+
