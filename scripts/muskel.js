@@ -3,7 +3,7 @@ var myHeadingg = document.querySelector('h1');
 function setMuskelGruppe () {
     var myMuskel = prompt('Gib deine Muskelgrupe ein:');
     localStorage.setItem('muskel',myMuskel);
-    myHeading.textContent =   myMuskel;
+    myHeadingg.textContent =   myMuskel;
 }
 if (localStorage.getItem != 'muskel'){
     setMuskelGruppe ();

@@ -7,12 +7,87 @@
     <title>Document</title>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <link href="styles/style.css" rel="stylesheet" type="text/css">
+    <script language="javascript">
+          function ClearFields() 
+          {
+
+     document.getElementById("value1").value = "";
+     document.getElementById("value2").value = "";
+     document.getElementById("value3").value = "";
+     document.getElementById("value4").value = "";
+     document.getElementById("value5").value = "";
+     document.getElementById("value6").value = "";
+          }
+    </script>
+    
+    <script language="javascript">
+        function addNumbers() 
+          {
+            var val1 = 2.5
+            var val2 = parseInt(document.getElementById("value1").value);
+            var ans1 = document.getElementById("value1")
+            ans1.value = val2 + val1;
+
+            var val3 = parseInt(document.getElementById("value2").value);
+            var ans2 = document.getElementById("value2")
+            ans2.value = val3 + val1;
+          
+            var val4 = parseInt(document.getElementById("value3").value);
+            var ans3 = document.getElementById("value3")
+            ans3.value = val4 + val1;
+          
+            var val5 = parseInt(document.getElementById("value4").value);
+            var ans4 = document.getElementById("value4")
+            ans4.value = val5 + val1;
+          
+            var val6 = parseInt(document.getElementById("value5").value);
+            var ans5 = document.getElementById("value5")
+            ans5.value = val6 + val1;
+          
+            var val7 = parseInt(document.getElementById("value6").value);
+            var ans6 = document.getElementById("value6")
+            ans6.value = val7 + val1;
+          
+          }
+    </script>
+    <script language="javascript">
+            function subNumbers() 
+            {
+            var val1 = 2.5
+            var val2 = parseInt(document.getElementById("value1").value);
+            var ansA = document.getElementById("value1")
+            ansA.value = val2 - val1;
+
+                
+
+            var val3 = parseInt(document.getElementById("value2").value);
+            var ansB = document.getElementById("value2")
+            ansB.value = val3 - val1;
+          
+            var val4 = parseInt(document.getElementById("value3").value);
+            var ansC = document.getElementById("value3")
+            ansC.value = val4 - val1;
+          
+            var val5 = parseInt(document.getElementById("value4").value);
+            var ansD = document.getElementById("value4")
+            ansD.value = val5 - val1;
+          
+            var val6 = parseInt(document.getElementById("value5").value);
+            var ansE = document.getElementById("value5")
+            ansE.value = val6 - val1;
+          
+            var val7 = parseInt(document.getElementById("value6").value);
+            var ansF = document.getElementById("value6")
+            ansF.value = val7 - val1;
+            }
+    </script>
+    
   
 </head>
 <body>
 
   <div class="navbar-left">
-    <a href="#">
+    <a href="index.html">
       <i class="fa fa-angle left" aria-hidden="true">Zurück</i>
     </a>
   </div>
@@ -39,44 +114,45 @@
     <th class="tg-031e">Übung<br></th>
     <th class="tg-031e">Sätze</th>
     <th class="tg-031e">Wiederholungen</th>
+    <th class="tg-031e">Maximal-Gewicht</th>
   </tr>
   <tr>
     <td class="tg-031e">Dumbell Incline Press<br></td>
     <td class="tg-031e">5<br></td>
     <td class="tg-031e">20-15-12-10-8<br></td>
+    <td class="tg-031e"><input style="padding:0px;"type="text" id="value1" name="value1" value=""/></td>
   </tr>
   <tr>
     <td class="tg-031e">High Flys<br></td>
     <td class="tg-031e">4</td>
     <td class="tg-031e">15-15-15-15</td>
+    <td class="tg-031e"><input style="padding:0px;"type="text" id="value2" name="value2" value=""/></td>
   </tr>
   <tr>
     <td class="tg-031e">Innere Brust Hantel<br>Around the worlds<br></td>
     <td class="tg-031e">3<br>3<br></td>
     <td class="tg-031e">10-10-10<br>15-15-15<br></td>
+    <td class="tg-031e"><input style="padding:0px;"type="text" id="value3" name="value1" value=""/>
+                        <input style="padding:0px;"type="text" id="value4" name="value1" value=""/>
+    </td>
   </tr>
   <tr>
     <td class="tg-031e">Stripsatz Schrägbank Flys<br>*3 mal 4 Sätze<br></td>
     <td class="tg-031e">4</td>
     <td class="tg-031e">10-10-10-10</td>
+    <td class="tg-031e"><input style="padding:0px;"type="text" id="value5" name="value1" value=""/></td>
   </tr>
   <tr>
     <td class="tg-031e">Seitliche Brust Seilzug<br></td>
     <td class="tg-031e">3<br></td>
     <td class="tg-031e">15-15-15<br></td>
+    <td class="tg-031e"><input style="padding:0px;"type="text" id="value6" name="value1" value=""/></td>
   </tr>
 </table>
+<input style="background-color:green;color:white; margin-top:10px; margin-right:10px; border-radius:10px;" type="button" name="submit" value="Training lief" onclick="javascript:addNumbers()"/>
+<input style="background-color:red;color:white; margin-top:10px; margin-right:10px; border-radius:10px;" type="button" name="submit1" value="Training lief nicht" onclick="javascript:subNumbers()"/>
+<input style="background-color:black;color:white; margin-top:10px; margin-right:10px; border-radius:10px;" type="button" name="submit2" value="Reset Inputfields" onclick="javascript:ClearFields()"/>
 </div>
-<script>
-    function myFunction() {
-        var x = document.getElementById("myDIV");
-        if (x.style.display === "none") {
-            x.style.display = "block";
-        } else {
-            x.style.display = "none";
-        }
-    }
-    </script>
 
 <div class="col col-10">
     <h2>Rücken</h2>

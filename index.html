@@ -14,7 +14,7 @@
   <a href="trainingspläne.html" class="w3-bar-item w3-button">Mein Trainingsplan</a>
   <a href="shakes.html" class="w3-bar-item w3-button">Fitness-Shakes</a>
   <a href="dontclickme.html" class="w3-bar-item w3-button">Bait</a>
-  <a href="myaccout.html" class="w3-bar-item w3-button">Mein Konto</a>
+  <a href="add.html" class="w3-bar-item w3-button">Mein Konto</a>
   <a href="index.html" class="w3-bar-item w3-button">Logout</a>
 </div>
 
@@ -63,9 +63,33 @@
         </script>
         
   <button style="display:none;"id="openNav" class="w3-button w3-teal w3-xlarge" onclick="w3_open()">&#9776;</button>
-    <h1 style="margin-left:25%;margin-right:25%;text-align: center; width:100%;">JR Fitness</h1>
+    <h1 style="text-align:auto">JR Fitness</h1>
 
+    <button onclick="setUserName()">Klicken
+    </button>
 
+    <div>
+        <span id="username"></span>
+    </div>
+<script>
+    
+var myHeading = document.querySelector('username');
+
+function setUserName () {
+    var myName = prompt('Gib deinen Namen ein:');
+    localStorage.setItem('name',myName);
+    myHeading.textContent = 'Send Nudes ' + myName;
+}
+if (!localStorage.getItem('name')){
+    setUserName ();
+} else{
+    var storedName = localStorage.getItem('name');
+    myHeading.textContent = 'Nicht drauf klicken' + myName ;
+}
+myButton.onclick = function () {
+    setUserName();
+}
+</script>
 <script>
         function w3_open() {
           //document.getElementById("main").style.marginLeft = "25%";

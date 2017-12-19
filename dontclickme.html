@@ -20,11 +20,19 @@
         <img src="images/laughing.gif">
 
         <div>
-            <input id="Zahl1">
+            <input id="Zahl1" placeholder="Hier eine Zahl eingeben">
         </input>
-            <input id="Zahl2">
-        </input>
+            <p id="Zahl2">
+            </p>
+        <button class="fitness-button" onclick="zahl()"></button>
         </div>
     </div>
+    <script>
+        function zahl(Zahl1)
+        {
+            return Zahl1 + 5;
+           }
+        document.getElementById("Zahl2").innerHTML = zahl(Zahl1)
+    </script>
 </body>
 </html>
